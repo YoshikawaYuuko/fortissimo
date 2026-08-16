@@ -1,0 +1,24 @@
+#!/bin/bash
+
+repo init -u https://github.com/Evolution-X/manifest.git -b bka --git-lfs --depth=1
+/opt/crave/resync.sh # sync source
+
+git clone https://github.com/HiroZukki/device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
+
+export BUILD_USERNAME=yuuko
+export BUILD_HOSTNAME=sweet_bullet
+
+# build start
+. build/envsetup.sh
+lunch lineage_earth-bp4a-userdebug
+m evolution
+
+# Upload files to gofile
+echo "Upload to gofile will be started..."
+if [ -f out/target/product/earth/*202608*.zip ]; then
+    wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+    chmod +x upload.sh ; ./upload.sh out/target/product/earth/*202608*.zip
+    echo "Upload Done!"
+else
+    echo "No zip found!" 
+fi
