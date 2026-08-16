@@ -3,6 +3,7 @@
 repo init -u https://github.com/Evolution-X/manifest.git -b bka --git-lfs --depth=1
 /opt/crave/resync.sh # sync source
 
+rm -rf device/xiaomi/earth
 git clone https://github.com/YoshikawaYuuko/device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
 
 export BUILD_USERNAME=yuuko
@@ -11,6 +12,7 @@ export BUILD_HOSTNAME=sweet_bullet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
+make installclean
 m evolution
 
 # Upload files to gofile
