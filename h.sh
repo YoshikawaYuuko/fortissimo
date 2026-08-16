@@ -3,7 +3,7 @@
 repo init -u https://github.com/Evolution-X/manifest.git -b bka --git-lfs --depth=1
 /opt/crave/resync.sh # sync source
 
-git clone https://github.com/HiroZukki/device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
+git clone https://github.com/YoshikawaYuuko/device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
 
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=sweet_bullet
