@@ -6,6 +6,9 @@ repo init -u https://github.com/Evolution-X/manifest.git -b bka --git-lfs --dept
 rm -rf device/xiaomi/earth
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
 
+# for when gms not synced
+git clone --depth=1 https://github.com/Evolution-X/vendor_gms.git -b bka vendor/gms
+
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=sweet_bullet
 
