@@ -166,6 +166,11 @@ android_app_certificate {
 }
 
 android_app_certificate {
+    name: "com.android.npumanager.certificate.override",
+    certificate: "com.android.npumanager.certificate.override",
+}
+
+android_app_certificate {
     name: "com.android.ondevicepersonalization.certificate.override",
     certificate: "com.android.ondevicepersonalization.certificate.override",
 }
@@ -278,6 +283,11 @@ android_app_certificate {
 android_app_certificate {
     name: "com.android.wifi.certificate.override",
     certificate: "com.android.wifi.certificate.override",
+}
+
+android_app_certificate {
+    name: "com.android.webapp.certificate.override",
+    certificate: "com.android.webapp.certificate.override",
 }
 
 android_app_certificate {
